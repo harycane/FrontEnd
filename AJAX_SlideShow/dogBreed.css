@@ -1,0 +1,125 @@
+/**
+ * Created by HaryKrishnan Ramasubramanian (Andrew ID: hramasub) on 05/01/17.
+ */
+/* Web Font Resource */
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+/* ----------------------------------------------------------------------- */
+
+
+/* Applying the Web Font rule */
+@font-face {
+	font-family: ‘Source Sans Pro’;
+	src: url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+}
+
+/* ------------------------------------------------------------------------ */
+
+
+/* Setting the Web Font and the default backup */
+html {
+	font-family: Source Sans Pro, Arial;
+	font-size: 1em;
+}
+
+
+/* -------------------------------------------------------------------------- */
+
+
+/* Styling the headings */
+header h1{
+    text-align: center;
+    margin: 0em;
+    padding-top: 1.5em;
+    padding-bottom: 0.2em;
+
+    width: 100%;
+
+
+}
+/* Text Gradient reference.
+http://creative-punch.net/2014/02/colorful-gradient-text-css3/
+ */
+h1{
+    background: linear-gradient(180deg,yellow,green);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+h2{
+    color: rgb(6,147,255);
+
+}
+
+/*--------------------------------------------------------------------------------*/
+
+/*
+For ViewPort <= 1300px; the image goes below the Right For You
+section and assumes 100% width.
+ */
+@media screen and (max-width: 1300px) {
+    main{
+         height:auto;
+        width: auto;
+        margin: 2em;
+        background-color: rgb(255,255,255);
+
+    }
+
+
+    body{
+        background-color: rgb(239,239,239);
+
+    }
+    #leftText {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+    #rightImage{
+        padding: 2em;
+    }
+
+
+    hr{
+        margin: 2em;
+    }
+
+}
+
+
+/* --------------------------------------------------------------------------- */
+
+/*
+For ViewPort > 1300px; the image floats to the right
+of the text section and assumes a fixed width.
+ */
+@media screen and (min-width: 1301px) {
+    main{
+        height: 750px;
+        max-height: 750px;
+        margin: 2em;
+        width: auto;
+        background-color: rgb(255,255,255);
+
+    }
+    body{
+        background-color: rgb(239,239,239);
+
+    }
+    #leftText {
+        float: left;
+        width: 51%;
+        padding-left: 2em;
+    }
+    #rightImage{
+        float:right;
+        padding-top: 6em;
+        padding-right: 2em;
+    }
+    hr{
+        margin: 2em;
+    }
+
+}
+
+/* --------------------------------------------------------------------------- */
