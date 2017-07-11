@@ -1,0 +1,503 @@
+/* Web Font Resource */
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+/* ----------------------------------------------------------------------- */
+
+
+/* Applying the Web Font rule */
+@font-face {
+    font-family: ‘Source Sans Pro’;
+    src: url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+}
+
+/* ------------------------------------------------------------------------ */
+
+
+/* Setting the Web Font and the default backup */
+html {
+    font-family: Source Sans Pro, Arial;
+    font-size: 1em;
+}
+
+
+/* ------------------------------------------------------------------------- */
+
+
+/* Setting residue padding and margin to 0 initially */
+body,header,nav,ul {
+    margin: 0em;
+    padding: 0em;
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+
+
+/* Setting colors for h2 and h1 */
+h2 {
+    color: rgb(0,0,0);
+}
+
+h1 {
+    color: rgb(6,147,255) !important;
+}
+
+
+/* --------------------------------------------------------------------------- */
+
+
+/* Main Heading of the website */
+header h1{
+    text-align: center;
+    background-color: black;
+    height: 3em;
+    margin: 0em;
+    padding-top: 1.5em;
+
+}
+
+header{
+    width: 100% !important;
+}
+
+/* --------------------------------------------------------------------------- */
+
+
+
+/* Navigation bar */
+nav{
+    background-color: rgb(6,147,255);
+}
+
+nav a {
+    color: rgb(255,255,255);
+
+
+}
+
+nav a:hover{
+    color: black;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+a{
+    color: rgb(6,147,255);
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------- */
+
+
+
+/* Styling the main content */
+main {
+    background-color: rgb(255,255,255);
+
+}
+
+/* --------------------------------------------------------------------------- */
+
+
+
+
+/* Getting the Dog image */
+#section-reading-dog {
+    content: url(reading_dog.png);
+
+}
+
+/* --------------------------------------------------------------------------- */
+
+
+
+/* Styling the quoted text */
+#section-quoteoftheday {
+    font-style: italic;
+    font-weight: bold;
+    font-weight: 100;
+
+}
+
+#section-quoteoftheday p:nth-child(3) {
+    text-align: right;
+    padding-left: 1.4em;
+}
+
+#section-quoteoftheday blockquote {
+    line-height: 2em;
+}
+
+
+/* --------------------------------------------------------------------------- */
+
+
+
+/* For Viewport <= 960px */
+@media screen and (max-width: 960px) {
+
+    /*  Styling the main display to FlexBox */
+    main{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: auto;
+
+    }
+
+
+    /*  Styling the table */
+    table{
+        border-collapse: collapse;
+        table-layout: fixed;
+        width: 100%;
+    }
+    th, td{
+        overflow: auto;
+    }
+    tr{
+        height: 2em;
+
+    }
+
+    .table-header-title {
+        width: 28%;
+
+    } .table-header-author{
+        width: 26%;
+    }
+
+    td:nth-child(1) {
+        text-align: left;
+        padding-left: 0.5em;
+    }
+
+    td:nth-child(2) {
+        text-align: left;
+        padding-left: 0.5em;
+
+    }
+
+
+    /*  Styling the Navigation bar */
+    nav{
+        text-align: center;
+        padding: 1em;
+    }
+
+    #section-about ul{
+
+        padding-left: 2.5em;
+
+
+    }
+
+
+
+
+    /* Ordering FlexBox items */
+    #section-favoritegenres img {
+        width: 100%;
+    }
+
+    #section-reading-dog{
+        align-self: center;
+        border-radius: 50%;
+
+        padding: 2em;
+        order:1;
+
+    }
+    #section-quoteoftheday{
+        flex-basis: 100%;
+        align-self: flex-start;
+        padding-left: 4.6em;
+        padding-right: 4.6em;
+        padding-bottom: 2em;
+        order: 2;
+
+    }
+
+    #section-whatreading{
+        flex-basis: 100%;
+        align-self: flex-start;
+        padding-left: 4.6em;
+        padding-right: 4.6em;
+        padding-bottom: 2em;
+        order: 3;
+
+    }
+    #section-favoritegenres{
+        flex-basis: 100%;
+        align-self: flex-start;
+        padding-top: 2em;
+        padding-left: 4.6em;
+        padding-right: 4.6em;
+        padding-bottom: 2em;
+        order: 4;
+
+    }
+    #section-about{
+        flex-basis: 100%;
+        align-self: flex-start;
+        padding-left: 4.6em;
+        padding-right: 4.8em;
+        padding-bottom: 2em;
+
+        order: 5;
+
+    }
+    #section-contact{
+        flex-basis: 100%;
+        align-self: auto;
+        padding-left: 4.6em;
+        padding-right: 4.6em;
+        padding-bottom: 1em;
+        line-height: 2em;
+        order: 6;
+
+    }
+
+
+} /* End of Viewport  <= 960px */
+
+/* --------------------------------------------------------------------------- */
+
+
+
+
+
+/* For Viewport > 960px */
+@media screen and (min-width: 961px) {
+
+
+/*  Getting the margin equal to the difference of 960px from Viewport */
+    main {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 960px;
+        height: auto;
+       /* padding-left: 1em !important;
+       / padding-right: 1em !important; */
+        max-width: 960px;
+        margin: 0 auto !important;
+    }
+    body{
+
+        background-color: rgb(239,239,239);
+    }
+
+
+
+
+
+    /*  Styling the table */
+    table{
+        width: 23.4em;
+    }
+
+    tr{
+        height: 4em;
+    }
+
+    td:nth-child(1) {
+        text-align: left;
+        padding-left: 0.4em;
+        padding-right: 0.4em;
+
+        line-height: 1.6em;
+    }
+
+    td:nth-child(2) {
+        text-align: left;
+        padding-left: 0.3em;
+        padding-right: 0.2em;
+
+    }
+
+    /*  Styling the Navigation bar */
+    nav {
+        padding: 1.5em;
+        text-align: center;
+
+    }
+
+    nav ul li {
+        display: inline-flex;
+        width: 10em;
+        text-align: center;
+    }
+
+    #section-about ul{
+
+        padding-left: 2.5em;
+
+
+    }
+
+
+    /*  Styling the Image width */
+    #section-favoritegenres img {
+        width: 25em;
+    }
+
+
+
+
+    /* Ordering of FlexBox items */
+    #section-reading-dog{
+        border-radius: 50%;
+
+        flex-basis: 33%;
+        align-self: center;
+        padding: 3em;
+        order:1;
+
+    }
+    #section-quoteoftheday{
+        padding-left: 6.4em;
+        flex-basis: 41%;
+        padding-top: 3em;
+
+        order: 2;
+
+
+    }
+    #section-whatreading{
+        flex-basis: 47%;
+        padding-top: 1.2em;
+       padding-left: 2.6em;
+       padding-right: 0.5em;
+        order: 3;
+
+    }
+    #section-favoritegenres{
+        flex-basis: 40%;
+
+        padding-top: 1.2em;
+
+         padding-left: 1em;
+         padding-right: 1.5em;
+
+        order: 4;
+
+    }
+    #section-about{
+        flex-basis: 100%;
+        padding-top: 1.6em;
+
+
+       padding-left: 2.6em;
+    padding-right: 2.4em;
+
+    order: 5;
+
+    }
+    #section-contact {
+        flex-basis: 100%;
+        padding-top: 1.6em;
+
+        padding-left: 2.6em;
+        padding-right: 2.6em;
+
+        line-height: 2em;
+        padding-bottom: 1.4em;
+
+        order: 6;
+
+    }
+
+} /* End of Viewport > 960px */
+
+/* --------------------------------------------------------------------------- */
+
+
+
+
+/* Form styling  */
+.required{
+    color: rgb(255,0,0);
+}
+input[type="submit"] {
+    background-color: rgb(6,147,255);
+    color: rgb(255,255,255);
+}
+
+input[type="reset"] {
+    background-color: rgb(6,147,255);
+    color: rgb(255,255,255);
+}
+input[type="text"] {
+    border: 0.2em inset rgb(239,239,239);
+}
+input[type="email"] {
+    border: 0.2em inset rgb(239,239,239);
+}
+#select-howheard {
+    border: 0.2em inset rgb(239,239,239);
+}
+
+
+/* --------------------------------------------------------------------------- */
+
+
+
+/* Table styling */
+table {
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+
+table, th, td {
+    border: 1px solid rgb(0,0,0);
+}
+
+
+tbody{
+    text-align: center;
+}
+thead{
+    text-align: left;
+
+}
+th {
+    padding-left: 1em;
+}
+
+table thead{
+    color: rgb(0,0,0);
+    background-color: rgb(134,193,239);
+}
+table tbody tr:nth-child(2n+1) {
+    background-color: rgb(255,255,255);
+}
+table tbody tr:nth-child(2n+2) {
+    background-color: rgb(205,233,255);
+}
+
+
+/* --------------------------------------------------------------------------- */
+
+
+
+
+/* Footer */
+footer{
+    color: rgb(255,255,255);
+    background-color: black;
+    text-align: center;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    width: 100%;
+}
+
+/* -----------------------------------------THE END----------------------------------------------------------------- */
